@@ -30,4 +30,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
   <div class="login-container">
     <h2>Acceso al Panel</h2>
-    <form me
+    <form method="post">
+      <input type="email" name="email" placeholder="Correo electrónico" required><br>
+      <input type="password" name="password" placeholder="Contraseña" required><br>
+      <button type="submit">Entrar</button>
+      <?php if (!empty($error)) echo "<p class='error'>$error</p>"; ?>
+    </form>
+  </div>
+</body>
+</html>
